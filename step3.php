@@ -69,9 +69,9 @@
       $index = $j + ($i * $n_criteria);
       $col = $value[$index] * $weight[$j] / 100;
       $row += $col;
-      // echo $value[$index] . " dikali " . $weight[$j] / 100 . "<br>";
+     
     }
-    // echo $row . "<br>";
+
     $Q[$i] = 0.5 * $row;
 
     // step 2
@@ -80,11 +80,8 @@
       $index = $j + ($i * $n_criteria);
       $col = pow($value[$index], ($weight[$j] / 100));
       $row *= $col;
-      // echo $value[$index] . " dipangkat " . $weight[$j] / 100 . "<br>";
     }
-    // echo 0.5 * $row . "<br>";
     $Q[$i] = 0.5 * $row + $Q[$i];
-    // echo $Q[$i] . "<br>";
   }
 
   // d.) Mengurutkan berdasarkan nilai terbesar
@@ -101,25 +98,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Aplikasi SPK</title>
 </head>
 
-<body>
-  <table>
-    <tr>
-      <th>Subjek</th>
-      <th>Nilai</th>
-      <th>Peringkat</th>
-    </tr>
-    <?php for($i = $n_subject-1; $i >= 0; $i--){ ?>
-    <tr>
-      <td><?php echo $Q[$i][1]; ?></td>
-      <td align="center"><?php echo $Q[$i][0]; ?></td>
-      <td align="center"><?php echo $n_subject - $i; ?></td>
-    </tr>
-    <?php } ?>
-  </table>
-  <a href="index.php"><button>Hitung Lagi</button></a>
+<body style="background-color:white;">
+  <div class="container register">
+        <div class="row justify-content-center register-form">
+          <div class="col-md-12">
+            <form method="POST" target="_self">
+              <table class="table text">
+                <tr style="text-align:center;">
+                  <th >Subjek</th>
+                  <th>Nilai</th>
+                  <th>Peringkat</th>
+                </tr>
+                <?php for($i = $n_subject-1; $i >= 0; $i--){ ?>
+                <tr style="text-align:center;">
+                  <td><?php echo $Q[$i][1]; ?></td>
+                  <td ><?php echo $Q[$i][0]; ?></td>
+                  <td ><?php echo $n_subject - $i; ?></td>
+                </tr>
+                <?php } ?>
+              </table>
+              <button class="btnNext"><a href="index.php" style="color:white;">Hitung Lagi</a></button>
+            </form>
+          </div>
+        </div>
+  </div>
+
 </body>
 
 </html>

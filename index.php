@@ -17,17 +17,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Aplikasi SPK</title>
 </head>
 
-<body>
-  <form method="POST" target="_self">
-    <div>Masukkan jumlah kriteria</div>
-    <div><input name="n_criteria" type="number" required></div>
-    <div>Masukkan jumlah subjek</div>
-    <div><input name="n_subject" type="number" required></div>
-    <input name="button" type="submit" value="Next">
-  </form>
+<body style="background-color:white;">
+  <div class="container register">
+        <div class="row justify-content-center register-form">
+          <div class="col-md-12">
+            <form method="POST" target="_self">
+            <h3 class="text">WASPAS</h3>
+              <div class="form-group">
+                <label class="text">Masukkan jumlah kriteria</label>
+                <input type="number" class="form-control" name="n_criteria">
+              </div>
+              <div class="form-group">
+                <label class="text">Masukkan jumlah subjek</label>
+                <input type="number" class="form-control" name="n_subject">
+              </div>
+              <button type="submit" name="button" class="btnNext">NEXT</button>
+            </form>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
