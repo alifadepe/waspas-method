@@ -1,8 +1,8 @@
 <?php
   session_start();
 
-  if(!isset($_SESSION['criteria'])){
-    header('Location: step1.php');
+  if(!isset($_SESSION['subject'])){
+    header('Location: step2.php');
   }
 
   // Inisialisasi
