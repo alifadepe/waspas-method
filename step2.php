@@ -47,7 +47,7 @@
                   <?php } else if($j==0) {?>
                   <td><input name="subject[]" class="form-control" type="text" required></td>
                   <?php } else {?>
-                  <td><input name="value[]" class="form-control" type="text" required></td>
+                  <td><input name="value[]" class="form-control" type="number" required></td>
                   <?php } ?>
                   <?php } ?>
                 </tr>
