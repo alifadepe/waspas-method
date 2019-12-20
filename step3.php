@@ -105,27 +105,27 @@
 
 <body style="background-color:white;">
   <div class="container register">
-        <div class="row justify-content-center register-form">
-          <div class="col-md-12">
-            <form method="POST" target="_self">
-              <table class="table text">
-                <tr style="text-align:center;">
-                  <th >Subjek</th>
-                  <th>Nilai</th>
-                  <th>Peringkat</th>
-                </tr>
-                <?php for($i = $n_subject-1; $i >= 0; $i--){ ?>
-                <tr style="text-align:center;">
-                  <td><?php echo $Q[$i][1]; ?></td>
-                  <td ><?php echo $Q[$i][0]; ?></td>
-                  <td ><?php echo $n_subject - $i; ?></td>
-                </tr>
-                <?php } ?>
-              </table>
-              <a href="index.php" style="color:white;"><button class="btnNext" type="button">Hitung Lagi</button></a>
-            </form>
-          </div>
-        </div>
+    <div class="row justify-content-center register-form">
+      <div class="col-md-12">
+        <form method="POST" target="_self">
+          <table class="table text">
+            <tr style="text-align:center;">
+              <th>Subjek</th>
+              <th>Nilai</th>
+              <th>Peringkat</th>
+            </tr>
+            <?php for($i = $n_subject-1; $i >= 0; $i--){ ?>
+              <tr style="text-align:center;">
+                <td><?php echo $Q[$i][1]; ?></td>
+                <td><?php echo $Q[$i][0]; ?></td>
+                <td><?php echo $n_subject - $i; ?></td>
+              </tr>
+            <?php } ?>
+          </table>
+          <a href="index.php" style="color:white;"><button class="btnNext" type="button">Hitung Lagi</button></a>
+        </form>
+      </div>
+    </div>
   </div>
 
 </body>

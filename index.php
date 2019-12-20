@@ -24,20 +24,20 @@
 
 <body style="background-color:white;">
   <div class="container register">
-        <div class="row justify-content-center register-form">
-          <div class="col-md-12">
-            <form method="POST" target="_self">
-            <h3 class="text">WASPAS</h3>
-              <div class="form-group">
-                <label class="text">Masukkan jumlah kriteria</label>
-                <input type="number" class="form-control" name="n_criteria" required>
-              </div>
-              <div class="form-group">
-                <label class="text">Masukkan jumlah subjek</label>
-                <input type="number" class="form-control" name="n_subject" required>
-              </div>
-              <button type="submit" name="button" class="btnNext">NEXT</button>
-            </form>
+    <div class="row justify-content-center register-form">
+      <div class="col-md-12">
+        <form method="POST" target="_self">
+          <h3 class="text">WASPAS</h3>
+          <div class="form-group">
+            <label class="text">Masukkan jumlah kriteria</label>
+            <input type="number" class="form-control" name="n_criteria" required>
+          </div>
+          <div class="form-group">
+            <label class="text">Masukkan jumlah subjek</label>
+            <input type="number" class="form-control" name="n_subject" required>
+          </div>
+          <button type="submit" name="button" class="btnNext">NEXT</button>
+        </form>
       </div>
     </div>
   </div>
