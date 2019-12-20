@@ -122,7 +122,7 @@
                 </tr>
                 <?php } ?>
               </table>
-              <button class="btnNext"><a href="index.php" style="color:white;">Hitung Lagi</a></button>
+              <a href="index.php" style="color:white;"><button class="btnNext" type="button">Hitung Lagi</button></a>
             </form>
           </div>
         </div>
